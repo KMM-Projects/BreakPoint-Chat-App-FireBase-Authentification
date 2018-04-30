@@ -17,8 +17,9 @@ class CreateGroupsVC: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     
     var emailArray = [String]()
+    var chosenUserArray = [String]()
     
-    @IBOutlet weak var groupMemberLabel: UIStackView!
+    @IBOutlet weak var groupMemberLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class CreateGroupsVC: UIViewController {
         emailSearchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged) //monitor all event conected with the TextField
 
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        doneBtn.isHidden = true
     }
 
     @objc func textFieldDidChange(){
@@ -67,10 +73,32 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell  else {
             return UITableViewCell() }
        let profileImage = UIImage(named: "defaultProfileImage")
-        
+        if chosenUserArray.contains(emailArray[indexPath.row]) {
         cell.configureCell(profileImage: profileImage!, email: emailArray[indexPath.row], isSelected: true)
-        return cell
+        } else {
+        cell.configureCell(profileImage: profileImage!, email: emailArray[indexPath.row], isSelected: false)
     }
+        return cell } 
+    //when you select a tableView cell
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //create a cell and pul the email from the cell
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else {return} // give as an actual cell 
+        if !chosenUserArray.contains(cell.emailLabel.text!) {
+            chosenUserArray.append(cell.emailLabel.text!) //add to the end of the array the new email
+            groupMemberLabel.text = chosenUserArray.joined(separator: ", ")
+            doneBtn.isHidden = false
+        } else {
+            chosenUserArray = chosenUserArray.filter({ $0 != cell.emailLabel.text! }) // filter we want to kepp everybody who is not the current cell
+            if chosenUserArray.count >= 1 {
+                groupMemberLabel.text = chosenUserArray.joined(separator: "; ")
+            } else {
+                groupMemberLabel.text = "Add People To your Group"
+                doneBtn.isHidden = true
+            }
+        }
+    }
+    
     
 }
 // when i start to search for email and i press "c" the search query should be everything what started with C than if i type "ce" everything what start with CE should be in query = i am updating the query to achieve this i need this extension

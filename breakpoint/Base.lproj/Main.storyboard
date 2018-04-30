@@ -423,7 +423,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD PEOPLE TO THE GROUP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxc-06-997">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD PEOPLE TO THE GROUP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uxc-06-997">
                                         <rect key="frame" x="0.0" y="119" width="303" height="19"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -439,32 +439,32 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wnx-fT-Hu9">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wnx-fT-Hu9">
                                         <rect key="frame" x="0.0" y="208" width="303" height="329"/>
                                         <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="62" id="17P-LO-SmH" customClass="UserCell" customModule="breakpoint" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="303" height="62"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="60" id="17P-LO-SmH" customClass="UserCell" customModule="breakpoint" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="303" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="17P-LO-SmH" id="X7y-b7-LC4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="303" height="62"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="303" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="6ks-5R-epn">
-                                                            <rect key="frame" x="23" y="9" width="44" height="44"/>
+                                                            <rect key="frame" x="23" y="8" width="44" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="44" id="ATW-2W-zx2"/>
                                                                 <constraint firstAttribute="height" constant="44" id="JAv-jk-wnA"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="semail@email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="GNF-gz-WoB">
-                                                            <rect key="frame" x="77" y="21" width="186" height="20"/>
+                                                            <rect key="frame" x="77" y="21" width="186" height="18"/>
                                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                                             <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="7Su-Ym-4bd">
-                                                            <rect key="frame" x="273" y="0.0" width="20" height="62"/>
+                                                            <rect key="frame" x="273" y="0.0" width="20" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="Z1X-E0-5LV"/>
                                                             </constraints>
@@ -490,6 +490,7 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <sections/>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -509,7 +510,7 @@
                         <outlet property="descriptionTextField" destination="yX0-3k-kWj" id="kCw-9G-9YI"/>
                         <outlet property="doneBtn" destination="na8-Rm-Fgd" id="yeF-sM-7KK"/>
                         <outlet property="emailSearchTextField" destination="kwk-59-3Sx" id="q9j-FC-kcz"/>
-                        <outlet property="groupMemberLabel" destination="Yd4-Pl-cfw" id="Tyy-gO-S7o"/>
+                        <outlet property="groupMemberLabel" destination="kwk-59-3Sx" id="ave-2h-wWA"/>
                         <outlet property="tableView" destination="Wnx-fT-Hu9" id="I1a-db-wEv"/>
                         <outlet property="titleTextField" destination="nH4-ns-Ykf" id="hkQ-lg-3AI"/>
                     </connections>
