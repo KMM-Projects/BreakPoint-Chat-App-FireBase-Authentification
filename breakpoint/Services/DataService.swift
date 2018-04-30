@@ -75,6 +75,25 @@ class DataService {
         }
     }
     
+    func getEmail(forSearchQuery query: String, handler: @escaping(_ emailArray: [String]) -> ()){
+        var emailArray = [String]()
+        //we age gona observ all users and return what match our query
+        
+        REF_USERS.observe(.value) { (userSnapShot) in  //we are looking into entire reference and all his children
+            guard let usersnapShot = userSnapShot.children.allObjects as? [DataSnapshot] else { return}
+            
+            for user in usersnapShot {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                if email.contains(query) == true && email != Auth.auth().currentUser?.email {
+                    // i shoul have not be apeared in the search = i am not allowed to find my self
+                    emailArray.append(email)
+                }
+            }
+            handler(emailArray)
+            
+        }
+    }
 }
 
 
