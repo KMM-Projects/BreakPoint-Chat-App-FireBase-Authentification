@@ -94,6 +94,32 @@ class DataService {
             
         }
     }
+    // we need a function wich can generate userID from his Email
+    
+    func getIds(forUsername usernames: [String], handler: @escaping(_ uidArray: [String])->()) {
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+            var idArray = [String]()
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else {return}
+            //assumin we get a value
+            for user in userSnapshot {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                if usernames.contains(email) {
+                    idArray.append(user.key)
+                }
+            }
+            handler(idArray)
+        }
+        
+    }
+    //func to create a group
+    
+    func createGroup(withTitle title:String, andDescription description: String, forUserIds ids: [String], handler: @escaping(_ groupCreated: Bool)->()){
+        //use groups reference if it is not there than it will create
+        REF_GROUPS.childByAutoId().updateChildValues(["title": title, "description": description, "members": ids])
+        handler(true) //succesfully created
+        
+    }
 }
 
 
