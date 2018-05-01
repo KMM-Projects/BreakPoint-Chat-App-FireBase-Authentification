@@ -10,6 +10,7 @@
 		49D94D8120957CC50097D4A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49D94D8020957CC50097D4A1 /* GoogleService-Info.plist */; };
 		49D94D832095874B0097D4A1 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D94D822095874B0097D4A1 /* CreateGroupsVC.swift */; };
 		49D94D8520958B930097D4A1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D94D8420958B930097D4A1 /* UserCell.swift */; };
+		49D94D892096AF1A0097D4A1 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D94D882096AF1A0097D4A1 /* GroupCell.swift */; };
 		71B61A061F23CEAA00FA8925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A051F23CEAA00FA8925 /* AppDelegate.swift */; };
 		71B61A081F23CEAA00FA8925 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A071F23CEAA00FA8925 /* FeedVC.swift */; };
 		71B61A0A1F23CEAA00FA8925 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A091F23CEAA00FA8925 /* GroupsVC.swift */; };
@@ -36,6 +37,7 @@
 		49D94D8020957CC50097D4A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49D94D822095874B0097D4A1 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
 		49D94D8420958B930097D4A1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		49D94D882096AF1A0097D4A1 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		659804F2063C9B52666C8A28 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		71B61A021F23CEAA00FA8925 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B61A051F23CEAA00FA8925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				71B61A281F265BB500FA8925 /* ShadowView.swift */,
 				71B61A321F26876100FA8925 /* FeedCell.swift */,
 				49D94D8420958B930097D4A1 /* UserCell.swift */,
+				49D94D882096AF1A0097D4A1 /* GroupCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				71B61A311F26811600FA8925 /* UIViewExt.swift in Sources */,
 				71B61A331F26876100FA8925 /* FeedCell.swift in Sources */,
 				71B61A2D1F26701B00FA8925 /* MeVC.swift in Sources */,
+				49D94D892096AF1A0097D4A1 /* GroupCell.swift in Sources */,
 				71B61A231F26584800FA8925 /* AuthVC.swift in Sources */,
 				71B61A0A1F23CEAA00FA8925 /* GroupsVC.swift in Sources */,
 				71B61A251F26587E00FA8925 /* LoginVC.swift in Sources */,
